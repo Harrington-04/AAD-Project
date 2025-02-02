@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('file:///E:/h2/hm/images/124.jpg'); /* Correct local path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: #ffd987;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            font-family: system-ui;
+            margin-bottom: 15px;
+        }
+        .login-container h2 span {
+            display: block;
+            font-size: 1.5em;
+                font-weight: bold; 
+            }
+        .btn {
+            font-family: system-ui;
+            width: 100%;
+            padding: 10px;
+            background-color: #69460a;
+            color: rgb(251, 250, 247);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px; /* Bring button closer to the text */
+        }
+        .btn:hover {
+            background-color: #9a6e3a;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2><span>CINAMON</span> STUDENT HOSTEL</h2>
+        <!-- Explore Button -->
+        <button class="btn" id="exploreButton"><b>EXPLORE</b></button>
+        <!-- Staff Login Button -->
+        <button class="btn" id="staffButton"><b>STAFF LOGIN</b></button>
+    </div>
+    
+    <script>
+        // Redirect for the 'EXPLORE' button
+        document.getElementById('exploreButton').addEventListener('click', function() {
+            window.location.href = 'file:///E:/h2/hm/extras/overview.html#contact';
+        });
+
+        // Staff login functionality
+        document.getElementById('staffButton').addEventListener('click', function() {
+            var staffID = prompt('Please enter your ID:');
+            
+            if (staffID && staffID.toLowerCase() === 'admin') {
+                window.location.href = 'file:///E:/h2/HM/frontend/index.html';
+            }
+            else {
+                alert('INVALID ID');
+            }
+        });
+    </script>
+</body>
+</html>
